@@ -1,6 +1,5 @@
 # Attention
 * Please make all your commits to 'testing' branch only. do not modify 'master' branch
-* And also please avoid creating unnecessary branches.
 * testing branch will be merged with master after QA team carried out testings.
 
 # Laravel PHP Framework
