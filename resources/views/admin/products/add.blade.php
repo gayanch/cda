@@ -4,40 +4,11 @@
     <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
     <script>
         $(function () {
-            'use strict';
+
             CKEDITOR.replace('editor');
-            var dropZone = $('#drop-zone');
-            var uploadForm = $('form');
 
-            var startUpload = function(files) {
-                console.log(files)
-            }
+        })
 
-            uploadForm.addEventListener('submit', function(e) {
-                var uploadFiles = document.getElementById('js-upload-files').files;
-                e.preventDefault()
-
-                startUpload(uploadFiles)
-            })
-
-            dropZone.ondrop = function(e) {
-                e.preventDefault();
-                this.className = 'upload-drop-zone';
-
-                startUpload(e.dataTransfer.files)
-            }
-
-            dropZone.ondragover = function() {
-                this.className = 'upload-drop-zone drop';
-                return false;
-            }
-
-            dropZone.ondragleave = function() {
-                this.className = 'upload-drop-zone';
-                return false;
-            }
-
-        });
     </script>
 
 @stop
