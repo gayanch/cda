@@ -20,5 +20,13 @@ Route::get('/login', function () {
 });
 
 
+Route::get('/admin', function () {
+    return view('admin.master');
+});
+
+Route::resource('/products', 'ProductController');
+
+
+
 
 Route::get('/home', 'HomeController@index');

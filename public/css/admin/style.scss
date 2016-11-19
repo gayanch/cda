@@ -1,14 +1,37 @@
+
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Source Sans Pro',sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+
+/*login*/
 .lockscreen-credentials {
   margin-left: 70px;
 }
+
 .lockscreen-credentials .form-control {
   border: 0;
 }
+
 .lockscreen-credentials .btn {
   background-color: #fff;
   border: 0;
   padding: 0 10px;
 }
+
 .lockscreen-footer {
   margin-top: 10px;
 }
@@ -20,19 +43,23 @@
   margin-bottom: 25px;
   font-weight: 300;
 }
+
 .login-logo a,
 .register-logo a {
   color: #444;
 }
+
 .login-page,
 .register-page {
   background: #d2d6de;
 }
+
 .login-box,
 .register-box {
   width: 360px;
   margin: 7% auto;
 }
+
 @media (max-width: 768px) {
   .login-box,
   .register-box {
@@ -40,6 +67,7 @@
     margin-top: 20px;
   }
 }
+
 .login-box-body,
 .register-box-body {
   background: #fff;
@@ -47,16 +75,207 @@
   border-top: 0;
   color: #666;
 }
+
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {
   color: #777;
 }
+
 .login-box-msg,
 .register-box-msg {
   margin: 0;
   text-align: center;
   padding: 0 20px 20px 20px;
 }
+
 .social-auth-links {
   margin: 10px 0;
+}
+
+/*end login*/
+
+/*admin*/
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: absolute;
+}
+
+
+#sidebar {
+  background-color: #222d32;
+  height: 100vh;
+  width: 230px;
+
+  .side-head{
+
+    width: 100%;
+  }
+
+  .side-menu {
+    list-style: none;
+    padding: 10px 0 0 15px;
+
+    .active{
+      color: #fff;
+      text-decoration: none;
+    }
+
+    li {
+
+      a {
+        color: #b8c7ce;
+        text-decoration: none;
+        border-left: 3px solid transparent;
+        padding: 12px 5px 12px 15px;
+        display: block;
+        font-size: 17px;
+
+        span{
+          margin-left: 15px;
+        }
+      }
+
+      a:hover {
+        color: #ccc;
+        text-decoration: none;
+
+      }
+
+      ul.sub-menu{
+        display: none;
+        list-style: none;
+        margin: 0 1px;
+        background: #2c3b41;
+        padding-left: 5px;
+        li{
+          margin:0;
+
+          a{
+            padding: 5px 5px 5px 15px;
+            display: block;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            color:#b8c7ce;
+            background: transparent;
+          }
+        }
+
+        li:hover{
+          a{
+            color:#fff
+          }
+        }
+      }
+    }
+
+
+    li:hover{
+      a{
+        color: #fff;
+        background: #1e282c;
+        border-left-color: #3c8dbc;
+
+      }
+    }
+
+    li.active{
+      a{
+        color: #fff;
+        background: #1e282c;
+        border-left-color: #3c8dbc;
+      }
+    }
+
+
+  }
+
+
+}
+
+#main-header {
+  background-color: #222d32;
+  width: 100%;
+  height: 65px;
+  color:#FFFFFF;
+  padding-left: 39px;
+  padding-top: 10px;
+
+  .title{
+
+    width: 100%;
+
+    color: #FFFFFF;
+
+    font-size: 27px;
+  }
+}
+
+#content-wrap {
+  margin-left: 230px;
+  min-height: 100vh;
+  background-color: #ecf0f5;
+
+
+
+}
+
+#content{
+  min-height: 250px;
+  padding:15px 30px 15px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ecf0f5;
+
+  .head-title{
+    margin: 10px 0 20px 0;
+    font-size: 24px;
+  }
+
+}
+
+.card {
+  background: #fff;
+  padding: 10px;
+}
+
+.options {
+  .card {
+    margin-bottom: 10PX;
+
+
+    .head {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .footer {
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 10px;
+      text-align: right;
+    }
+  }
+
+}
+
+.m-lr-10{
+  margin: 0 10px;
+}
+
+
+form{
+  label.control-label{
+    text-align: left !important;
+  }
+}
+
+.tab-pane{
+  padding-top: 20px;
+  padding-left: 20px;
 }
